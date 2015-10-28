@@ -29,9 +29,9 @@ router.get('/add-pr', function(req,res){
 
 })
 
-router.get('/directory', function(req,res){
+router.get('/personal-records', function(req,res){
 
-  res.render('directory.html')
+  res.render('records.html')
 
 })
 

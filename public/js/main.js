@@ -11,15 +11,16 @@ function renderPeeps(){
 		success : function(response) {
 			console.log(response);
 
-			var people = response.people;
+			var pr = response.pr;
 
-			for(var i=0;i<people.length;i++){
+			for(var i=0;i<pr.length;i++){
 				var htmlToAdd = '<div class="col-md-4">'+
-					'<img src='+people[i].imageUrl+' width="100">'+
-					'<h1>'+people[i].name+'</h1>'+
+					'<img src='+pr[i].imageUrl+' width="100">'+
+					'<h1>'+pr[i].record+'</h1>'+
+					'<h1>'+pr[i].lift+'</h1>'+
 				'</div>';
 			
-				jQuery("#people-holder").append(htmlToAdd);
+				jQuery("#pr-holder").append(htmlToAdd);
 			}
 
 

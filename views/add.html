@@ -29,25 +29,22 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h1>Let's add an ITP Person</h1>
+        <h1>Add your lifting record today</h1>
         <form method="post" action="/api/create">
           <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+            <label for="lift">Lifting type</label>
+            <input type="text" class="form-control" id="lift" placeholder="What was the type of lift?" name="lift">
           </div>
           <div class="form-group">
-            <label for="itpYear">ITP Year</label>
-            <input type="text" class="form-control" id="itpYear" placeholder="Year" name="itpYear">
+            <label for="record">Record</label>
+            <input type="text" class="form-control" id="record" placeholder="How heavy was the lift?" name="record">
           </div>
           <div class="form-group">
-            <label for="interests">Interests</label>
-            <input type="text" class="form-control" id="interests" name="interests">
-            <p class="help-block">Enter interests separated by comma</p>
+            <label for="notes">Notes</label>
+            <input type="text" class="form-control" id="notes" name="notes">
+            <p class="help-block">Enter your notes. Separated comments by comma.</p>
           </div>
-          <div class="form-group">
-            <label for="link">Link</label>
-            <input type="text" class="form-control" id="link" placeholder="Link" name="link">
-          </div>  
+    
           <div class="form-group">
             <label for="imageUrl">ImageURL</label>
             <input type="text" class="form-control" id="imageUrl" placeholder="imageUrl" name="imageUrl">
