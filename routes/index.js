@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 
 // our db models
-var Person = require("../models/person.js");
+var Pr = require("../models/pr.js");
 var Course = require("../models/course.js");
 
 /**
@@ -41,7 +41,7 @@ router.post('/api/create', function(req,res){
   console.log('!!!!!GOT HERE!!!!!!')
   console.log(req.body);
 
-  var personObj = {
+  var prObj = {
     name: req.body.name,
     itpYear: req.body.itpYear,
     interests: req.body.interests.split(','),
@@ -49,9 +49,9 @@ router.post('/api/create', function(req,res){
     imageUrl: req.body.imageUrl  
   }
 
-  var person = new Person(personObj);
+  var pr = new Pr(prObj);
 
-  person.save(function(err,data){
+  pr.save(function(err,data){
     if(err){
       var error = {
         status: "ERROR",
@@ -62,7 +62,7 @@ router.post('/api/create', function(req,res){
 
     var jsonData = {
       status: "OK",
-      person: data
+      pr: data
     }
 
     return res.json(jsonData);
@@ -74,7 +74,7 @@ router.post('/api/create', function(req,res){
 
 router.get('/api/get', function(req,res){
 
-  Person.find(function(err,data){
+  Pr.find(function(err,data){
 
       if(err){
         var error = {
@@ -100,9 +100,9 @@ router.get('/api/delete/:id', function(req, res, next){
   var requestedId = req.param('id');
 
   // Mongoose method to remove, http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove
-  Person.findByIdAndRemove(requestedId,function(err, data){
+  Pr.findByIdAndRemove(requestedId,function(err, data){
     if(err || data == null){
-      var error = {status:'ERROR', message: 'Could not find that animal to delete'};
+      var error = {status:'ERROR', message: 'Could not find the person to delete'};
       return res.json(error);
     }
 
