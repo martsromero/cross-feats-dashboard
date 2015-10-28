@@ -15,7 +15,7 @@ var Course = require("../models/course.js");
 router.get('/', function(req, res) {
 
   var jsonData = {
-  	'name': 'itp-directory',
+  	'name': 'personal-record',
   	'api-status':'OK'
   }
 
@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
   res.json(jsonData)
 });
 
-router.get('/add-person', function(req,res){
+router.get('/add-pr', function(req,res){
 
   res.render('add.html')
 
@@ -42,10 +42,9 @@ router.post('/api/create', function(req,res){
   console.log(req.body);
 
   var prObj = {
-    name: req.body.name,
-    itpYear: req.body.itpYear,
-    interests: req.body.interests.split(','),
-    link: req.body.link,
+    lift: req.body.lift,
+    record: req.body.record,
+    notes: req.body.notes.split(','),
     imageUrl: req.body.imageUrl  
   }
 
@@ -86,7 +85,7 @@ router.get('/api/get', function(req,res){
 
       var jsonData = {
         status: "OK",
-        people: data
+        pr: data
       }
 
       return res.json(jsonData);
@@ -109,7 +108,7 @@ router.get('/api/delete/:id', function(req, res, next){
     // otherwise, respond back with success
     var jsonData = {
       status: 'OK',
-      message: 'Successfully deleted id ' + requestedId
+      message: 'Successfully deleted your personal record ' + requestedId
     }
 
     res.json(jsonData);

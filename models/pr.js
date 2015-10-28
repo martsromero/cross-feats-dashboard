@@ -4,10 +4,9 @@ var Schema = mongoose.Schema;
 // See http://mongoosejs.com/docs/schematypes.html
 
 var prSchema = new Schema({
-	name: String,
-	itpYear: Number,
-	interests: [String],
-	link: String,
+	lift: String,
+	record: Number,
+	notes: [String],
 	imageUrl: String,
 	dateAdded : { type: Date, default: Date.now }
 })
