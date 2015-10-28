@@ -95,6 +95,29 @@ router.get('/api/get', function(req,res){
 
 })
 
+router.get('/api/delete/:id', function(req, res, next){
+
+  var requestedId = req.param('id');
+
+  // Mongoose method to remove, http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove
+  Person.findByIdAndRemove(requestedId,function(err, data){
+    if(err || data == null){
+      var error = {status:'ERROR', message: 'Could not find that animal to delete'};
+      return res.json(error);
+    }
+
+    // otherwise, respond back with success
+    var jsonData = {
+      status: 'OK',
+      message: 'Successfully deleted id ' + requestedId
+    }
+
+    res.json(jsonData);
+
+  })
+
+})
+
 
 
 
