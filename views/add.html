@@ -33,21 +33,21 @@
         <form method="post" action="/api/create" id="commentForm">
           <div class="form-group">
             <label for="lift">Lifting type</label>
-            <input type="text" class="form-control" id="lift" placeholder="What was the type of lift?" name="lift">
+            <input type="text" class="form-control" id="lift" placeholder="What was the type of lift?" name="lift" required>
           </div>
           <div class="form-group">
             <label for="record">Record</label>
-            <input type="text" class="form-control" id="record" placeholder="How heavy was the lift?" name="record">
+            <input type="text" class="form-control" id="record" placeholder="How heavy was the lift?" name="record" required>
           </div>
           <div class="form-group">
             <label for="notes">Notes</label>
-            <input type="text" class="form-control" id="notes" name="notes">
+            <input type="text" class="form-control" id="notes" name="notes" required>
             <p class="help-block">Enter your notes. Separated comments by comma.</p>
           </div>
     
           <div class="form-group">
             <label for="imageUrl">ImageURL</label>
-            <input type="text" class="form-control" id="imageUrl" placeholder="imageUrl" name="imageUrl">
+            <input type="text" class="form-control" id="imageUrl" placeholder="imageUrl" name="imageUrl" required>
           </div>                    
           <button type="submit" class="btn btn-default">Submit</button>
         </form> 
