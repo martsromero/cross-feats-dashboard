@@ -30,7 +30,7 @@
     <div class="row">
       <div class="col-md-8">
         <h1>Add your lifting record today</h1>
-        <form method="post" action="/api/create">
+        <form method="post" action="/api/create" id="commentForm">
           <div class="form-group">
             <label for="lift">Lifting type</label>
             <input type="text" class="form-control" id="lift" placeholder="What was the type of lift?" name="lift">
@@ -59,6 +59,12 @@
 
     <!-- JQuery script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js"></script>
+
+    <script type="text/javascript">
+      $("#commentForm").validate();
+    </script>
 
     <!-- CUSTOM JS -->
     <script src="js/main.js"></script>
