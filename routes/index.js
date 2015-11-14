@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 // our db models
 var Pr = require("../models/pr.js");
-var Course = require("../models/course.js");
+
 
 /**
  * GET '/'
@@ -116,6 +116,8 @@ router.get('/api/delete/:id', function(req, res, next){
   })
 
 })
+
+
 
 
 

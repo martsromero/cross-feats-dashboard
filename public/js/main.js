@@ -18,6 +18,7 @@ function renderPeeps(){
 					'<img src='+pr[i].imageUrl+' width="100">'+
 					'<h1>'+pr[i].record+'</h1>'+
 					'<h1>'+pr[i].lift+'</h1>'+
+					
 				'</div>';
 			
 				jQuery("#pr-holder").append(htmlToAdd);

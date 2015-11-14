@@ -63,7 +63,14 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js"></script>
 
     <script type="text/javascript">
-      $("#commentForm").validate();
+      $("#commentForm").validate({
+        rules: {
+            field: {
+              required: true,
+              number: false
+            }
+          }
+      });
     </script>
 
     <!-- CUSTOM JS -->
