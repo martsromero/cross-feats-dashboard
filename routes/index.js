@@ -12,11 +12,20 @@ var Pr = require("../models/pr.js");
  * @param  {Object} req
  * @return {Object} json
  */
-router.get('/', function(req, res) {
+
+
+router.get('/json-data', function(req,res){
 
   var jsonData = {
-  	'name': 'personal-record',
-  	'api-status':'OK'
+    'name': 'personal-record',
+    'api-status':'OK'
+
+})
+
+router.get('/', function(req, res) {
+
+res.render('crossfeats.html')
+  
   }
 
   // respond with json data
