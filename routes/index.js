@@ -35,7 +35,7 @@ router.get('/personal-records', function(req,res){
 
 })
 
-router.get('/stats, function(req,res){
+router.get('/stats', function(req,res){
 
   res.render('crossfeats.html')
 
