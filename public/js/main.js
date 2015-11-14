@@ -67,48 +67,18 @@ buildLineChart();
 function buildLineChart(){
 	
 	var data = {
-	    labels: ["June 24 to July 2, 2014", "September 8 to 14, 2014", "March 1 to 7, 2015", "May 30 to June 5, 2015", "September 8 to 14, 2015"],
+	    labels: ["Philippine PR", "Nov 2014", "Feb 2015", "March 2015", "Early April 2015", " Late April 2015", "Early May 2015", "Late May 2015", "Early June 2015", "Late June 2015"],
 	    datasets: [
 	        {
-	            label: "Grace Poe",
+	            label: "Clean & Jerk in lbs.",
 	            fillColor: "rgba(107,185,240,0.2)",
 	            strokeColor: "rgba(107,185,240,1)",
 	            pointColor: "rgba(107,185,240,1)",
 	            pointStrokeColor: "#fff",
 	            pointHighlightFill: "#fff",
 	            pointHighlightStroke: "rgba(107,185,240,1)",
-	            data: [12,10,14,30,26]
-	        },
-	        {
-	            label: "Mar Roxas",
-	            fillColor: "rgba(247,202,24,0.2)",
-	            strokeColor: "rgba(247,202,24,1)",
-	            pointColor: "rgba(247,202,24,1)",
-	            pointStrokeColor: "#fff",
-	            pointHighlightFill: "#fff",
-	            pointHighlightStroke: "rgba(247,202,24,1)",
-	            data: [7,13,4,10,20]
-	        },
-	        {
-	            label: "Jojo Binay",
-	            fillColor: "rgba(211,84,0,0.2)",
-	            strokeColor: "rgba(211,84,0,1)",
-	            pointColor: "rgba(211,84,0,1)",
-	            pointStrokeColor: "#D35400",
-	            pointHighlightFill: "#D35400",
-	            pointHighlightStroke: "rgba(211,84,0,1)",
-	            data: [41,31,29,22,19]
-	        },
-	         {
-	            label: "Rody Duterte",
-	            fillColor: "rgba(150,40,27,0.2)",
-	            strokeColor: "rgba(150,40,27,1)",
-	            pointColor: "rgba(150,40,27,1)",
-	            pointStrokeColor: "#E74C3C",
-	            pointHighlightFill: "#E74C3C",
-	            pointHighlightStroke: "rgba(150,40,27,1)",
-	            data: [0,0,12,15,16]
-	        },
+	            data: [235,195,225,215,210, 255, 230,275, 285, 280]
+	        },    
 	    /***     {
 	            label: "Other candidates",
 	            fillColor: "rgba(151,187,205,0.2)",
