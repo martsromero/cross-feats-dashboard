@@ -12,20 +12,11 @@ var Pr = require("../models/pr.js");
  * @param  {Object} req
  * @return {Object} json
  */
-
-
-router.get('/json-data', function(req,res){
-
-  var jsonData = {
-    'name': 'personal-record',
-    'api-status':'OK'
-
-})
-
 router.get('/', function(req, res) {
 
-res.render('crossfeats.html')
-  
+  var jsonData = {
+  	'name': 'personal-record',
+  	'api-status':'OK'
   }
 
   // respond with json data
@@ -41,6 +32,12 @@ router.get('/add-pr', function(req,res){
 router.get('/personal-records', function(req,res){
 
   res.render('records.html')
+
+})
+
+router.get('/stats, function(req,res){
+
+  res.render('crossfeats.html')
 
 })
 
