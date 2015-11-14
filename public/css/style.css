@@ -26,8 +26,8 @@ canvas{
 }
 
 h3 {
-    text-align: right;
-    font-size:80%;
+    text-align: center;
+    font-size:100%;
 }
 
 
@@ -71,54 +71,8 @@ h3 {
   color: #ed8e6c;
   cursor: pointer;}
 
-
-
-  .legend{
+.legend{
   float: right;
   color: #6BB9F0;
-}
-
-#preferenceHolder {
-  width: 55%; overflow: visible; 
-  font-size:125%;
-  font-weight: bold;
-}
-
-#preferenceHolder ul {
-  list-style: none; 
-  position: relative; 
-  float: left; 
-  display: block; 
-  left: 50%; 
-}
-
-#preferenceHolder ul  { 
-  position: relative; 
-  float: left; 
-  display: block; 
-  right: 50%; 
-}
-
-#candidate1 {
-  font-size:168%;
-}
-
-#candidate2 {
-  font-size:168%;
-}
-
-#candidate3 {
-  font-size:168%;
-}
-
-#candidate4 {
-  font-size:168%;
-}
-
-.person {
-  font-size:143%;
-  display: block;
-  margin: auto;
-  width: 20%;
 }
 

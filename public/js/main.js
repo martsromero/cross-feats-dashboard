@@ -24,6 +24,7 @@ function init(){
 	      buildDoughnutChart(response.candidates);
 	      buildLineChart();
 	      filterData(response.candidates);
+	      buildSnatchChart();
 	     
 
 	    }
@@ -63,21 +64,22 @@ function renderPeeps(){
 }
 
 buildLineChart();
+buildSnatchChart();
 
 function buildLineChart(){
 	
 	var data = {
-	    labels: ["Philippine PR", "Nov 2014", "Feb 2015", "March 2015", "Early April 2015", " Late April 2015", "Early May 2015", "Late May 2015", "Early June 2015", "Late June 2015"],
+	    labels: ["Ph PR", "Nov '14", "Feb '15", "Early Apr '15", " Late Apr '15", "Late May '15", "Early June '15"],
 	    datasets: [
 	        {
-	            label: "Clean & Jerk in lbs.",
+	            label: "",
 	            fillColor: "rgba(107,185,240,0.2)",
 	            strokeColor: "rgba(107,185,240,1)",
 	            pointColor: "rgba(107,185,240,1)",
 	            pointStrokeColor: "#fff",
 	            pointHighlightFill: "#fff",
 	            pointHighlightStroke: "rgba(107,185,240,1)",
-	            data: [235,195,225,215,210, 255, 230,275, 285, 280]
+	            data: [235,195,225,210, 255,275, 285]
 	        },    
 	    /***     {
 	            label: "Other candidates",
@@ -101,6 +103,51 @@ function buildLineChart(){
 	}
 
 	var ctx = document.getElementById("lineChart").getContext("2d");
+	
+	var myLineChart = new Chart(ctx).Line(data, options);	
+	
+	var chartLegend = myLineChart.generateLegend();
+	
+	$('#lineChartLegend').append(chartLegend);
+}
+
+function buildSnatchChart(){
+	
+	var data = {
+	    labels: ["Ph PR", "May '15", "Early Sep '15", "Late Sep '15", "Early Oct '15", "Late Oct '15"],
+	    datasets: [
+	        {
+	            label: "",
+	            fillColor: "rgba(151,187,205,0.2)",
+	            strokeColor: "rgba(151,187,205,1)",
+	            pointColor: "rgba(151,187,205,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
+	            data: [125, 115, 105, 135, 145, 155]
+	        },    
+	    /***     {
+	            label: "Other candidates",
+	            fillColor: "rgba(151,187,205,0.2)",
+	            strokeColor: "rgba(151,187,205,1)",
+	            pointColor: "rgba(151,187,205,1)",
+	            pointStrokeColor: "#E74C3C",
+	            pointHighlightFill: "#E74C3C",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
+	            data: [40,46,41,23,19]
+	        } ***/
+	    ],
+	      
+	};	
+
+	var options = {
+		datasetStroke : true,
+		datasetFill : true,
+		pointDotRadius :5
+		
+	}
+
+	var ctx = document.getElementById("snatchChart").getContext("2d");
 	
 	var myLineChart = new Chart(ctx).Line(data, options);	
 	
