@@ -106,9 +106,9 @@ function buildLineChart(){
 	
 	var myLineChart = new Chart(ctx).Line(data, options);	
 	
-	var chartLegend = myLineChart.generateLegend();
+	// var chartLegend = myLineChart.generateLegend();
 	
-	$('#lineChartLegend').append(chartLegend);
+	// $('#lineChartLegend').append(chartLegend);
 }
 
 function buildSnatchChart(){
@@ -151,7 +151,7 @@ function buildSnatchChart(){
 	
 	var myLineChart = new Chart(ctx).Line(data, options);	
 	
-	var chartLegend = myLineChart.generateLegend();
+	// var chartLegend = myLineChart.generateLegend();
 	
-	$('#lineChartLegend').append(chartLegend);
+	// $('#lineChartLegend').append(chartLegend);
 }
