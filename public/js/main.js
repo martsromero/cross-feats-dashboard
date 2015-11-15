@@ -75,12 +75,12 @@ function buildLineChart(){
 	    datasets: [
 	        {
 	            label: "",
-	            fillColor: "rgba(107,185,240,0.2)",
-	            strokeColor: "rgba(107,185,240,1)",
-	            pointColor: "rgba(107,185,240,1)",
+	            fillColor: "rgba(247,202,24,0.5)",
+	            strokeColor: "rgba(247,202,24,1)",
+	            pointColor: "rgba(247,202,24,1)",
 	            pointStrokeColor: "#fff",
 	            pointHighlightFill: "#fff",
-	            pointHighlightStroke: "rgba(107,185,240,1)",
+	            pointHighlightStroke: "rgba(247,202,24,1)",
 	            data: [235,195,225,210, 255,275, 285]
 	        },    
 	    /***     {
@@ -120,12 +120,12 @@ function buildSnatchChart(){
 	    datasets: [
 	        {
 	            label: "",
-	            fillColor: "rgba(151,187,205,0.2)",
-	            strokeColor: "rgba(151,187,205,1)",
-	            pointColor: "rgba(151,187,205,1)",
+	            fillColor: "rgba(30,130,76,0.5)",
+	            strokeColor: "rgba(30,130,76,1)",
+	            pointColor: "rgba(30,130,76,1)",
 	            pointStrokeColor: "#fff",
 	            pointHighlightFill: "#fff",
-	            pointHighlightStroke: "rgba(151,187,205,1)",
+	            pointHighlightStroke: "rgba(30,130,76,1)",
 	            data: [125, 115, 105, 135, 145, 155]
 	        },    
 	    /***     {
@@ -162,7 +162,7 @@ function buildSnatchChart(){
 function buildPrChart(){
 	
 	var data = {
-	    labels: ["Philippine PR", "US PR", "Male CrossFitter Ave", "Female CrossFitter Ave", "Ben Smith", "Katrin Davidsdottir"],
+	    labels: ["Philippine PR", "US PR", "Male CF Average", "Female CF Average", "Ben Smith", "Katrin Davidsdottir"],
 	    datasets: [
 	        {
 	            label: "Back Squat",
@@ -238,10 +238,10 @@ function buildPrChart(){
     barStrokeWidth : 3,
 
     //Number - Spacing between each of the X value sets
-    barValueSpacing : 17,
+    barValueSpacing : 80,
 
     //Number - Spacing between data sets within X values
-    barDatasetSpacing : 1,
+    barDatasetSpacing : 3,
 
     //String - A legend template
     legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
