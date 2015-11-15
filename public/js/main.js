@@ -27,7 +27,7 @@ function init(){
 	      buildSnatchChart();
 	      buildPrChart();
 	      buildBacksquatChart();
-			buildDeadliftChart();
+		buildDeadliftChart();
 	     
 
 	    }
@@ -257,7 +257,7 @@ function buildDeadliftChart(){
 function buildPrChart(){
 	
 	var data = {
-	    labels: ["Personal Record", "Male CF Average", "Female CF Average", "Ben Smith", "Katrin Davidsdottir"],
+	    labels: ["Personal Record", "Male Average", "Female Average", "Ben Smith", "Katrin Davidsdottir"],
 	    datasets: [
 	        {
 	            label: "Back Squat",
@@ -265,7 +265,7 @@ function buildPrChart(){
 	            strokeColor: "rgba(217,30,24,1)",
 	            highlightFill: "rgba(217,30,24,1)",
 	            highlightStroke: "rgba(217,30,24,1)",
-	            data: [285,445,277,480,254]
+	            data: [285,431,272,480,254]
 	        },    
 	        {
 	            label: "Deadlift",
@@ -273,7 +273,7 @@ function buildPrChart(){
 	            strokeColor: "rgba(107,185,240,1)",
 	            highlightFill: "rgba(107,185,240,1)",
 	            highlightStroke: "rgba(107,185,240,1)",
-	            data: [375,530,340,540,310]
+	            data: [375,499,321,540,310]
 	        },  
 	        {
 	            label: "Snatch",
@@ -281,7 +281,7 @@ function buildPrChart(){
 	            strokeColor: "rgba(30,130,76,1)",
 	            highlightFill: "rgba(30,130,76,1)",
 	            highlightStroke: "rgba(30,130,76,1)",
-	            data: [155,276,162,300,187]
+	            data: [155,256,161,300,187]
 	        },    
 	        {
 	            label: "Clean & Jerk",
@@ -289,7 +289,7 @@ function buildPrChart(){
 	            strokeColor: "rgba(247,202,24,1)",
 	            highlightFill: "rgba(247,202,24,1)",
 	            highlightStroke: "rgba(247,202,24,1)",
-	            data: [185,333,205,335,216]
+	            data: [185,318,203,335,216]
 	        },  
 	    /***     {
 	            label: "Other candidates",
