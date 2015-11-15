@@ -109,7 +109,9 @@ function buildLineChart(){
 	var options = {
 		datasetStroke : true,
 		datasetFill : true,
-		pointDotRadius :5
+		pointDotRadius :5,
+		responsive: true,
+		maintainAspectRatio: true,
 		
 	}
 
@@ -153,7 +155,9 @@ function buildSnatchChart(){
 	var options = {
 		datasetStroke : true,
 		datasetFill : true,
-		pointDotRadius :5
+		pointDotRadius :5,
+		responsive: true,
+		maintainAspectRatio: true,
 		
 	}
 
@@ -199,7 +203,9 @@ function buildBacksquatChart(){
 	var options = {
 		datasetStroke : true,
 		datasetFill : true,
-		pointDotRadius :5
+		pointDotRadius :5,
+		responsive: true,
+		maintainAspectRatio: true,
 		
 	}
 
@@ -244,7 +250,9 @@ function buildDeadliftChart(){
 	var options = {
 		datasetStroke : true,
 		datasetFill : true,
-		pointDotRadius :5
+		pointDotRadius :5,
+		responsive: true,
+		maintainAspectRatio: true,
 		
 	}
 
@@ -341,6 +349,9 @@ function buildPrChart(){
     //Number - Spacing between data sets within X values
     barDatasetSpacing : 3,
 
+    responsive: true,
+	maintainAspectRatio: true,
+
     //String - A legend template
     legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 		
@@ -388,7 +399,9 @@ function buildActiveChart(){
 	var options = {
 		datasetStroke : true,
 		datasetFill : true,
-		pointDotRadius :5
+		pointDotRadius :5,
+		responsive: true,
+		maintainAspectRatio: true,
 		
 	}
 
@@ -456,7 +469,8 @@ var options = {
 		    percentageInnerCutout : 30,
 		    animationSteps : 168,
 		    animationEasing : "easeOutCirc",
-		    
+		    responsive: true,
+		    maintainAspectRatio: true,
 	}
 
 	var ctx = document.getElementById("dayChart").getContext("2d");
