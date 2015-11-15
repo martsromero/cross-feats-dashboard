@@ -28,6 +28,8 @@ function init(){
 	      buildPrChart();
 	      buildBacksquatChart();
 		buildDeadliftChart();
+		buildActiveChart();
+		buildDayChart();
 	     
 
 	    }
@@ -71,12 +73,14 @@ buildSnatchChart();
 buildPrChart();
 buildBacksquatChart();
 buildDeadliftChart();
+buildActiveChart();
+buildDayChart();
 
 
 function buildLineChart(){
 	
 	var data = {
-	    labels: ["Ph PR", "Nov '14", "Feb '15", "Early Apr '15", " Late Apr '15", "Late May '15", "Early June '15"],
+	    labels: ["Philippine PR", "Apr '15", "May '15"],
 	    datasets: [
 	        {
 	            label: "",
@@ -86,7 +90,7 @@ function buildLineChart(){
 	            pointStrokeColor: "#fff",
 	            pointHighlightFill: "#fff",
 	            pointHighlightStroke: "rgba(247,202,24,1)",
-	            data: [235,195,225,210, 255,275, 285]
+	            data: [165,150, 185]
 	        },    
 	    /***     {
 	            label: "Other candidates",
@@ -121,7 +125,7 @@ function buildLineChart(){
 function buildSnatchChart(){
 	
 	var data = {
-	    labels: ["Ph PR", "May '15", "Early Sep '15", "Late Sep '15", "Early Oct '15", "Late Oct '15"],
+	    labels: ["Philippine PR", "May '15", "Early Sep '15", "Late Sep '15", "Early Oct '15", "Late Oct '15"],
 	    datasets: [
 	        {
 	            label: "",
@@ -166,7 +170,7 @@ function buildSnatchChart(){
 function buildBacksquatChart(){
 	
 	var data = {
-	    labels: ["Ph PR", "Nov '14", "Feb '15", "Early Apr '15", " Late Apr '15", "Late May '15", "Early June '15"],
+	    labels: ["Philippine PR", "Nov '14", "Feb '15", "Early Apr '15", " Late Apr '15", "May '15", "June '15"],
 	    datasets: [
 	        {
 	            label: "",
@@ -211,7 +215,7 @@ function buildBacksquatChart(){
 function buildDeadliftChart(){
 	
 	var data = {
-	    labels: ["Ph PR", "Nov '14", "Feb '15", "Early Apr '15", " Late Apr '15", "Late May '15", "Early June '15"],
+	    labels: ["Ph PR", "Early June '15", "Late June '15", "July '15"],
 	    datasets: [
 	        {
 	            label: "",
@@ -221,7 +225,7 @@ function buildDeadliftChart(){
 	            pointStrokeColor: "#fff",
 	            pointHighlightFill: "#fff",
 	            pointHighlightStroke: "rgba(107,185,240,1)",
-	            data: [235,195,225,210, 255,275, 285]
+	            data: [335, 315, 335, 375]
 	        },    
 	    /***     {
 	            label: "Other candidates",
@@ -252,7 +256,6 @@ function buildDeadliftChart(){
 	
 	// $('#lineChartLegend').append(chartLegend);
 }
-
 
 function buildPrChart(){
 	
@@ -351,3 +354,116 @@ function buildPrChart(){
 	
 	$('#barChartLegend').append(barLegend);
 }
+
+function buildActiveChart(){
+	
+	var data = {
+		    labels: ["October 20,'14", "November '14", "December '14", "January '15", "February '15", "March '15", "April '15", "May '15", "June '15", "July '15", "August '15", "September '15", "October '15", "November 9, 2015"],
+		    datasets: [
+		        {
+		            label: "",
+		            fillColor: "rgba(46,204,113,0.5)",
+		            strokeColor: "rgba(247,202,24,1)",
+		            pointColor: "rgba(247,202,24,1)",
+		            pointStrokeColor: "#fff",
+		            pointHighlightFill: "#fff",
+		            pointHighlightStroke: "rgba(247,202,24,1)",
+		            data: [8,13,12,3,14,14,24,19,17,8,4,16,16,4]
+		       },    
+	    /***     {
+	            label: "Other candidates",
+	            fillColor: "rgba(151,187,205,0.2)",
+	            strokeColor: "rgba(151,187,205,1)",
+	            pointColor: "rgba(151,187,205,1)",
+	            pointStrokeColor: "#E74C3C",
+	            pointHighlightFill: "#E74C3C",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
+	            data: [40,46,41,23,19]
+	        } ***/
+	    ],
+	      
+	};
+	
+
+	var options = {
+		datasetStroke : true,
+		datasetFill : true,
+		pointDotRadius :5
+		
+	}
+
+	var ctx = document.getElementById("activeChart").getContext("2d");
+	
+	var myLineChart = new Chart(ctx).Line(data, options);	
+	
+	// var chartLegend = myLineChart.generateLegend();
+	
+	// $('#lineChartLegend').append(chartLegend);
+}
+
+function buildDayChart(){
+
+	var data = [
+	    {
+	        value: 35,
+	        color:"rgba(217,30,24,0.5)",
+	        highlight: "rgba(217,30,24,1)",
+	        label: "Monday"
+	    },
+	    {
+	        value: 36,
+	        color: "rgba(211,84,0,0.5)",
+	        highlight: "rgba(211,84,0,1)",
+	        label: "Tuesday"
+	    },
+	    {
+	        value: 23,
+	        color: "rgba(247,202,24,0.5)",
+	        highlight: "rgba(247,202,24,1)",
+	        label: "Wednesday"
+	    },
+	    {
+	        value: 31,
+	        color: "rgba(46,204,113,0.5)",
+	        highlight: "rgba(46,204,113,1)",
+	        label: "Thursday"
+	    },
+	    {
+	        value: 32,
+	        color: "rgba(107,185,240,0.5)",
+	        highlight: "rgba(107,185,240,1)",
+	        label: "Friday"
+	    },
+	    {
+	        value: 27,
+	        color: "rgba(31,58,147,0.5)",
+	        highlight: "rgba(31,58,147,1)",
+	        label: "Saturday"
+	    },
+	    {
+	        value: 1,
+	        color: "rgba(145,61,136,0.5)",
+	        highlight: "rgba(145,61,136,1)",
+	        label: "Sunday"
+	    },
+
+	]
+
+var options = {
+		
+		    segmentShowStroke : true,
+		    segmentStrokeWidth : 0.01,
+		    percentageInnerCutout : 30,
+		    animationSteps : 168,
+		    animationEasing : "easeOutCirc",
+		    
+	}
+
+	var ctx = document.getElementById("dayChart").getContext("2d");
+
+	var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
+}
+
+	
+
+	
