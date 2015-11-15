@@ -26,6 +26,8 @@ function init(){
 	      filterData(response.candidates);
 	      buildSnatchChart();
 	      buildPrChart();
+	      buildBacksquatChart();
+			buildDeadliftChart();
 	     
 
 	    }
@@ -67,6 +69,9 @@ function renderPeeps(){
 buildLineChart();
 buildSnatchChart();
 buildPrChart();
+buildBacksquatChart();
+buildDeadliftChart();
+
 
 function buildLineChart(){
 	
@@ -158,11 +163,101 @@ function buildSnatchChart(){
 }
 
 
+function buildBacksquatChart(){
+	
+	var data = {
+	    labels: ["Ph PR", "Nov '14", "Feb '15", "Early Apr '15", " Late Apr '15", "Late May '15", "Early June '15"],
+	    datasets: [
+	        {
+	            label: "",
+	            fillColor: "rgba(217,30,24,0.5)",
+	            strokeColor: "rgba(217,30,24,1)",
+	            pointColor: "rgba(217,30,24,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(217,30,24,1)",
+	            data: [235,195,225,210, 255,275, 285]
+	        },    
+	    /***     {
+	            label: "Other candidates",
+	            fillColor: "rgba(151,187,205,0.2)",
+	            strokeColor: "rgba(151,187,205,1)",
+	            pointColor: "rgba(151,187,205,1)",
+	            pointStrokeColor: "#E74C3C",
+	            pointHighlightFill: "#E74C3C",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
+	            data: [40,46,41,23,19]
+	        } ***/
+	    ],
+	      
+	};	
+
+	var options = {
+		datasetStroke : true,
+		datasetFill : true,
+		pointDotRadius :5
+		
+	}
+
+	var ctx = document.getElementById("backsquatChart").getContext("2d");
+	
+	var myLineChart = new Chart(ctx).Line(data, options);	
+	
+	// var chartLegend = myLineChart.generateLegend();
+	
+	// $('#lineChartLegend').append(chartLegend);
+}
+
+function buildDeadliftChart(){
+	
+	var data = {
+	    labels: ["Ph PR", "Nov '14", "Feb '15", "Early Apr '15", " Late Apr '15", "Late May '15", "Early June '15"],
+	    datasets: [
+	        {
+	            label: "",
+	            fillColor: "rgba(107,185,240,0.5)",
+	            strokeColor: "rgba(107,185,240,1)",
+	            pointColor: "rgba(107,185,240,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(107,185,240,1)",
+	            data: [235,195,225,210, 255,275, 285]
+	        },    
+	    /***     {
+	            label: "Other candidates",
+	            fillColor: "rgba(151,187,205,0.2)",
+	            strokeColor: "rgba(151,187,205,1)",
+	            pointColor: "rgba(151,187,205,1)",
+	            pointStrokeColor: "#E74C3C",
+	            pointHighlightFill: "#E74C3C",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
+	            data: [40,46,41,23,19]
+	        } ***/
+	    ],
+	      
+	};	
+
+	var options = {
+		datasetStroke : true,
+		datasetFill : true,
+		pointDotRadius :5
+		
+	}
+
+	var ctx = document.getElementById("deadliftChart").getContext("2d");
+	
+	var myLineChart = new Chart(ctx).Line(data, options);	
+	
+	// var chartLegend = myLineChart.generateLegend();
+	
+	// $('#lineChartLegend').append(chartLegend);
+}
+
 
 function buildPrChart(){
 	
 	var data = {
-	    labels: ["Philippine PR", "US PR", "Male CF Average", "Female CF Average", "Ben Smith", "Katrin Davidsdottir"],
+	    labels: ["Personal Record", "Male CF Average", "Female CF Average", "Ben Smith", "Katrin Davidsdottir"],
 	    datasets: [
 	        {
 	            label: "Back Squat",
@@ -170,7 +265,7 @@ function buildPrChart(){
 	            strokeColor: "rgba(217,30,24,1)",
 	            highlightFill: "rgba(217,30,24,1)",
 	            highlightStroke: "rgba(217,30,24,1)",
-	            data: [235,285,445,277,480,254]
+	            data: [285,445,277,480,254]
 	        },    
 	        {
 	            label: "Deadlift",
@@ -178,7 +273,7 @@ function buildPrChart(){
 	            strokeColor: "rgba(107,185,240,1)",
 	            highlightFill: "rgba(107,185,240,1)",
 	            highlightStroke: "rgba(107,185,240,1)",
-	            data: [335,375,530,340,540,310]
+	            data: [375,530,340,540,310]
 	        },  
 	        {
 	            label: "Snatch",
@@ -186,7 +281,7 @@ function buildPrChart(){
 	            strokeColor: "rgba(30,130,76,1)",
 	            highlightFill: "rgba(30,130,76,1)",
 	            highlightStroke: "rgba(30,130,76,1)",
-	            data: [125,155,276,162,300,187]
+	            data: [155,276,162,300,187]
 	        },    
 	        {
 	            label: "Clean & Jerk",
@@ -194,7 +289,7 @@ function buildPrChart(){
 	            strokeColor: "rgba(247,202,24,1)",
 	            highlightFill: "rgba(247,202,24,1)",
 	            highlightStroke: "rgba(247,202,24,1)",
-	            data: [165,185,333,205,335,216]
+	            data: [185,333,205,335,216]
 	        },  
 	    /***     {
 	            label: "Other candidates",

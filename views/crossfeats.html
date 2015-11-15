@@ -15,6 +15,9 @@
     <!-- Custom CSS inside CSS folder -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- WOW CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+
     
 
   </head>
@@ -25,57 +28,100 @@ Watch me WIP WIP. Watch me nae nae.
 Badumtugsh.
 
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+
+  <div class="wow fadeIn" data-wow-duration="8s">
+    <h1>Personal Records</h1>
+    <br>
+
+      <div class="wow fadeIn" data-wow-duration="8s">
+    <div class="row" align="center">
+
+<center>
+      <div class="col-md-2"><img src="img/martin.png" style="width:80px;height:80px;"></div>
+      <div class="col-md-2"><img src="img/male.png" style="width:80px;height:80px;"></div>
+      <div class="col-md-2"><img src="img/female.png" style="width:80px;height:80px;"></div>
+      <div class="col-md-2"><img src="img/ben.png" style="width:80px;height:80px;"></div>
+      <div class="col-md-2"><img src="img/katrin.png" style="width:80px;height:80px;"></div></center>
+      <div class="col-md-2">Starbucks Lover</div>
+
+    </div>
+    </div>
+
+
+    <br>
+
 <div class="row">
  <!--  <div class="col-xs-6 col-md-4"><center>Frequencies</center>
     <center><img src="http://i.imgur.com/oBaf2lv.gif" alt="Frequencies" style="width:300px;height:300px;"></center>
   </div> -->
 
-  <div class="col-xs-12 col-md-12"><center>PRs</center>
+  <div class="col-xs-12 col-md-12">
+
   <!--   <center><img src="http://cdn0.dailydot.com/uploaded/images/original/2015/6/26/tumblr.gif" alt="PR" style="width:800px;height:300px;"></center> -->
 
     <!-- PRs -->
       <div id="barChartLegend" class="legend"></div>
-      <canvas id="prChart" width="1400" height="500"></canvas>
+      <canvas id="prChart" width="1400" height="400"></canvas>
     </div>
 
 
   </div>
 </div>
+</div>
+
 <br>
 
 <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+
+  <div class="wow fadeIn" data-wow-duration="8s">
+<h1>Personal Lifting Records</h1>
+<br>
 <div class="row">
   <!-- <div class="col-xs-6 col-md-4"><center>Benchmarks</center>
     <center><img src="http://www.reactiongifs.us/wp-content/uploads/2014/10/what_the_hell_parks_rec.gif" alt="benchmarks" style="width:300px;height:200px;"></center>
   </div> -->
+
   <div class="col-xs-12 col-md-6"><center>Backsquat</center>
-    <center><img src="http://cdn.makeagif.com/media/5-05-2015/7oiCRY.gif" alt="BS" style="width:300px;height:200px;"></center>
+    <br>
+      <!-- Snatch -->
+    <div id="lineChartLegend" class="legend"></div>
+    <canvas id="backsquatChart" width="700" height="200"></canvas>
   </div>
   <div class="col-xs-12 col-md-6"><center>Deadlift</center>
-    <center><img src="http://i.giftrunk.com/n4vj1t.gif" alt="DL" style="width:300px;height:200px;"></center>
+    <br>
+      <!-- Deadlift -->
+    <div id="lineChartLegend" class="legend"></div>
+    <canvas id="deadliftChart" width="700" height="200"></canvas>
   </div>
 
 </div>
+</div>
+
 <br>
 
 <!-- Columns are always 50% wide, on mobile and desktop -->
+  <div class="wow fadeIn" data-wow-duration="8s">
 <div class="row">
 <!--   <div class="col-xs-6 col-md-4"><center>RX and weaknesses</center>
     <center><img src="http://i.imgur.com/N5v3FOK.gif" alt="RX" style="width:300px;height:200px;"></center>
 
   </div> -->
   <div class="col-xs-12 col-md-6"><center>Snatch</center>
+    <br>
         <!-- Snatch -->
       <div id="lineChartLegend" class="legend"></div>
       <canvas id="snatchChart" width="700" height="200"></canvas>
     </div>
 
   <div class="col-xs-12 col-md-6"><center>Clean & Jerk</center></div>
+  <br>
     <!-- Clean and Jerk -->
   <div id="lineChartLegend" class="legend"></div>
   <canvas id="lineChart" width="700" height="200"></canvas>
 </div>
 
+
+</div>
 </div>
 <br>
 
@@ -95,6 +141,11 @@ Badumtugsh.
 
     <!-- tabs JS -->
     <script src="js/tabs.js"></script>
+
+    <script src="js/wow.min.js"></script>
+                  <script>
+                  new WOW().init();
+                  </script>
 
       </body>
 </html>
