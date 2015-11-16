@@ -30,7 +30,7 @@
     <!-- Activity Chart -->
     <h1> Times in a month I went to CrossFit Union Square </h1>
        <div id="lineChartLegend" class="legend"></div>
-       <canvas id="activeChart" width="1400" height="300"></canvas>
+       <canvas id="activeChart" width="1400" height="168"></canvas>
      </div>
 
   </div>
@@ -38,25 +38,106 @@
 <br>
 <br>
 <div class="container-fluid">
-  <div class="col-md-1"> </div>
-  <div class="col-md-4">
+  <div class="col-md-2"> Starbucks Lover </div>
+  <div class="col-md-2">
     <!-- Day Chart -->
-    <h1> Day of the week I go the most </h1>
+    <h1> Frequency </h1>
            <div id="lineChartLegend" class="legend"></div>
-           <canvas id="dayChart" width="100" height="100"></canvas>
+           <canvas id="dayChart" width="50" height="50"></canvas>
   </div>
-  <div class="col-md-1"> </div>
-  <div class="col-md-6">Starbucks Lover</div>
+  <div class="col-md-2">Starbucks Lover </div>
+  <div class="col-md-2">Starbucks Lover </div>
+  <div class="col-md-2">Starbucks Lover </div>
+  <div class="col-md-2">Starbucks Lover </div>
 </div>
 
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+
+  <div class="wow fadeIn" data-wow-duration="8s">
+<h1>Personal Lifting Records in lbs.</h1>
+<br>
+<div class="container-fluid">
+  <!-- <div class="col-xs-6 col-md-4"><center>Benchmarks</center>
+    <center><img src="http://www.reactiongifs.us/wp-content/uploads/2014/10/what_the_hell_parks_rec.gif" alt="benchmarks" style="width:300px;height:200px;"></center>
+  </div> -->
+
+  <div class="col-xs-12 col-md-6"><center>Backsquat</center>
+    <br>
+      <!-- Snatch -->
+    <div id="lineChartLegend" class="legend"></div>
+    <canvas id="backsquatChart" width="500" height="168"></canvas>
+  </div>
+  <div class="col-xs-12 col-md-6"><center>Deadlift</center>
+    <br>
+      <!-- Deadlift -->
+    <div id="lineChartLegend" class="legend"></div>
+    <canvas id="deadliftChart" width="500" height="168"></canvas>
+  </div>
+
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="wow fadeIn" data-wow-duration="8s">
+<br>
+<div class="container-fluid">
+  <div class="col-xs-12 col-md-6"><center>Snatch</center>
+    <br>
+      <!-- Snatch -->
+           <div id="lineChartLegend" class="legend"></div>
+           <canvas id="snatchChart" width="500" height="168"></canvas>
+         </div>
+  <div class="col-xs-12 col-md-6"><center>Clean & Jerk</center>
+    <br>
+     <!-- Clean and Jerk -->
+       <div id="lineChartLegend" class="legend"></div>
+       <canvas id="lineChart" width="500" height="168"></canvas>
+     </div>
+
+</div>
+</div>
+
+<br>
+<br>
 
 
 
+</div>
+</div>
+<br>
+
+
+
+
+
+<div class="container-fluid">
+ <!--  <div class="col-xs-6 col-md-4"><center>Frequencies</center>
+    <center><img src="http://i.imgur.com/oBaf2lv.gif" alt="Frequencies" style="width:300px;height:300px;"></center>
+  </div> -->
+
+  <div class="col-xs-12 col-md-12">
+
+  <!--   <center><img src="http://cdn0.dailydot.com/uploaded/images/original/2015/6/26/tumblr.gif" alt="PR" style="width:800px;height:300px;"></center> -->
+
+    <!-- PRs -->
+    <h1>P(owe)R</h1>
+      <div id="barChartLegend" class="legend"></div>
+      <canvas id="prChart" width="1400" height="200"></canvas>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+<br>
 
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 
   <div class="wow fadeIn" data-wow-duration="8s">
-    <h1>Athlete Overview</h1>
+    <h1>Athlete Comparisson</h1>
     <br>
 
       <div class="wow fadeIn" data-wow-duration="8s">
@@ -126,85 +207,7 @@
 
     <br>
 
-<div class="container-fluid">
- <!--  <div class="col-xs-6 col-md-4"><center>Frequencies</center>
-    <center><img src="http://i.imgur.com/oBaf2lv.gif" alt="Frequencies" style="width:300px;height:300px;"></center>
-  </div> -->
 
-  <div class="col-xs-12 col-md-12">
-
-  <!--   <center><img src="http://cdn0.dailydot.com/uploaded/images/original/2015/6/26/tumblr.gif" alt="PR" style="width:800px;height:300px;"></center> -->
-
-    <!-- PRs -->
-    <h1>P(owe)R</h1>
-      <div id="barChartLegend" class="legend"></div>
-      <canvas id="prChart" width="1400" height="200"></canvas>
-    </div>
-
-
-  </div>
-</div>
-</div>
-
-<br>
-
-<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-
-  <div class="wow fadeIn" data-wow-duration="8s">
-<h1>Personal Lifting Records</h1>
-<br>
-<div class="container-fluid">
-  <!-- <div class="col-xs-6 col-md-4"><center>Benchmarks</center>
-    <center><img src="http://www.reactiongifs.us/wp-content/uploads/2014/10/what_the_hell_parks_rec.gif" alt="benchmarks" style="width:300px;height:200px;"></center>
-  </div> -->
-
-  <div class="col-xs-12 col-md-6"><center>Backsquat</center>
-    <br>
-      <!-- Snatch -->
-    <div id="lineChartLegend" class="legend"></div>
-    <canvas id="backsquatChart" width="500" height="168"></canvas>
-  </div>
-  <div class="col-xs-12 col-md-6"><center>Deadlift</center>
-    <br>
-      <!-- Deadlift -->
-    <div id="lineChartLegend" class="legend"></div>
-    <canvas id="deadliftChart" width="500" height="168"></canvas>
-  </div>
-
-</div>
-</div>
-
-<br>
-<br>
-
-<div class="wow fadeIn" data-wow-duration="8s">
-<h1>Personal Lifting Records</h1>
-<br>
-<div class="container-fluid">
-  <div class="col-xs-12 col-md-6"><center>Snatch</center>
-    <br>
-      <!-- Snatch -->
-           <div id="lineChartLegend" class="legend"></div>
-           <canvas id="snatchChart" width="500" height="168"></canvas>
-         </div>
-  <div class="col-xs-12 col-md-6"><center>Clean & Jerk</center>
-    <br>
-     <!-- Clean and Jerk -->
-       <div id="lineChartLegend" class="legend"></div>
-       <canvas id="lineChart" width="500" height="168"></canvas>
-     </div>
-
-</div>
-</div>
-
-<br>
-<br>
-
-
-
-</div>
-</div>
-<br>
 
 
     <!-- JQuery script -->
