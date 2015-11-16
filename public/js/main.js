@@ -268,50 +268,48 @@ function buildDeadliftChart(){
 function buildPrChart(){
 	
 	var data = {
-	    labels: ["Personal Record", "Male Average", "Female Average", "Ben Smith", "Katrin Davidsdottir"],
+	    labels: ["Back Squat", "Deadlift", "Snatch", "Clean & Jerk"],
 	    datasets: [
 	        {
-	            label: "Back Squat",
+	            label: "Personal Record",
 	            fillColor: "rgba(217,30,24,0.5)",
 	            strokeColor: "rgba(217,30,24,1)",
 	            highlightFill: "rgba(217,30,24,1)",
 	            highlightStroke: "rgba(217,30,24,1)",
-	            data: [285,431,272,480,254]
+	            data: [285,375,155,185]
 	        },    
 	        {
-	            label: "Deadlift",
+	            label: "Regionals Men's Average",
 	            fillColor: "rgba(107,185,240,0.5)",
 	            strokeColor: "rgba(107,185,240,1)",
 	            highlightFill: "rgba(107,185,240,1)",
 	            highlightStroke: "rgba(107,185,240,1)",
-	            data: [375,499,321,540,310]
+	            data: [445,530,276,333]
 	        },  
 	        {
-	            label: "Snatch",
+	            label: "Regionals Women's Average",
 	            fillColor: "rgba(30,130,76,0.5)",
 	            strokeColor: "rgba(30,130,76,1)",
 	            highlightFill: "rgba(30,130,76,1)",
 	            highlightStroke: "rgba(30,130,76,1)",
-	            data: [155,256,161,300,187]
+	            data: [277,340,162,205]
 	        },    
 	        {
-	            label: "Clean & Jerk",
+	            label: "Ben Smith",
 	            fillColor: "rgba(247,202,24,0.5)",
 	            strokeColor: "rgba(247,202,24,1)",
 	            highlightFill: "rgba(247,202,24,1)",
 	            highlightStroke: "rgba(247,202,24,1)",
-	            data: [185,318,203,335,216]
+	            data: [480,540,300,335]
 	        },  
-	    /***     {
-	            label: "Other candidates",
-	            fillColor: "rgba(151,187,205,0.2)",
-	            strokeColor: "rgba(151,187,205,1)",
-	            pointColor: "rgba(151,187,205,1)",
-	            pointStrokeColor: "#E74C3C",
-	            pointHighlightFill: "#E74C3C",
-	            pointHighlightStroke: "rgba(151,187,205,1)",
-	            data: [40,46,41,23,19]
-	        } ***/
+	     {
+	            label: "Katrin",
+	            fillColor: "rgba(211,84,0,0.5)",
+	            strokeColor: "rgba(211,84,0,1)",
+	            highlightFill: "rgba(211,84,0,1)",
+	            highlightStroke: "rgba(211,84,0,1)",
+	            data: [254,310,187,216]
+	        }, 
 	    ],
 
 	    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
@@ -464,18 +462,49 @@ function buildDayChart(){
 
 var options = {
 		
-		    segmentShowStroke : true,
-		    segmentStrokeWidth : 0.01,
-		    percentageInnerCutout : 30,
-		    animationSteps : 168,
-		    animationEasing : "easeOutCirc",
-		    responsive: true,
-		    maintainAspectRatio: true,
+		    //Boolean - Show a backdrop to the scale label
+		       scaleShowLabelBackdrop : false,
+
+		       //String - The colour of the label backdrop
+		       // scaleBackdropColor : "rgba(255,255,255,0.75)",
+
+		       // Boolean - Whether the scale should begin at zero
+		       scaleBeginAtZero : true,
+
+		       //Number - The backdrop padding above & below the label in pixels
+		       scaleBackdropPaddingY : 2,
+
+		       //Number - The backdrop padding to the side of the label in pixels
+		       scaleBackdropPaddingX : 2,
+
+		       //Boolean - Show line for each value in the scale
+		       scaleShowLine : false,
+
+		       //Boolean - Stroke a line around each segment in the chart
+		       // segmentShowStroke : true,
+
+		       //String - The colour of the stroke on each segement.
+		       // segmentStrokeColor : "#fff",
+
+		       //Number - The width of the stroke value in pixels
+		       segmentStrokeWidth : .01,
+
+		       //Number - Amount of animation steps
+		       animationSteps : 80,
+
+		       //String - Animation easing effect.
+		       animationEasing : "easeOutBounce",
+
+		       //Boolean - Whether to animate the rotation of the chart
+		       animateRotate : true,
+
+		       //Boolean - Whether to animate scaling the chart from the centre
+		       animateScale : true,
 	}
 
 	var ctx = document.getElementById("dayChart").getContext("2d");
 
-	var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
+	var myPolarAreaChart = new Chart(ctx).PolarArea(data,options);
 }
 
 	
