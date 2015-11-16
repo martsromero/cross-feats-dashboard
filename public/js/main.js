@@ -30,6 +30,7 @@ function init(){
 		buildDeadliftChart();
 		buildActiveChart();
 		buildDayChart();
+		buildTimeChart();
 	     
 
 	    }
@@ -75,6 +76,7 @@ buildBacksquatChart();
 buildDeadliftChart();
 buildActiveChart();
 buildDayChart();
+buildTimeChart();
 
 
 function buildLineChart(){
@@ -303,7 +305,7 @@ function buildPrChart(){
 	            data: [480,540,300,335]
 	        },  
 	     {
-	            label: "Katrin",
+	            label: "Katrin Davidsdottir",
 	            fillColor: "rgba(211,84,0,0.5)",
 	            strokeColor: "rgba(211,84,0,1)",
 	            highlightFill: "rgba(211,84,0,1)",
@@ -446,17 +448,17 @@ function buildDayChart(){
 	        label: "Friday"
 	    },
 	    {
-	        value: 27,
+	        value: 28,
 	        color: "rgba(31,58,147,0.5)",
 	        highlight: "rgba(31,58,147,1)",
-	        label: "Saturday"
+	        label: "Saturday and Sunday"
 	    },
-	    {
-	        value: 1,
-	        color: "rgba(145,61,136,0.5)",
-	        highlight: "rgba(145,61,136,1)",
-	        label: "Sunday"
-	    },
+	    // {
+	    //     value: 1,
+	    //     color: "rgba(145,61,136,0.5)",
+	    //     highlight: "rgba(145,61,136,1)",
+	    //     label: "Sunday"
+	    // },
 
 	]
 
@@ -505,6 +507,68 @@ var options = {
 	var ctx = document.getElementById("dayChart").getContext("2d");
 
 	var myPolarAreaChart = new Chart(ctx).PolarArea(data,options);
+}
+
+function buildTimeChart(){
+
+	var data = [
+	    {
+	        value: 102,
+	        color:"rgba(217,30,24,0.5)",
+	        highlight: "rgba(217,30,24,1)",
+	        label: "5:00 AM to 9:00 AM"
+	    },
+	    {
+	        value: 32,
+	        color: "rgba(46,204,113,0.5)",
+	        highlight: "rgba(46,204,113,1)",
+	        label: "10:00 AM to 3:00 PM"
+	    },
+	    {
+	        value: 50,
+	        color: "rgba(107,185,240,0.5)",
+	        highlight: "rgba(107,185,240,1)",
+	        label: "4:00 PM to 9:00 PM"
+	    },
+	   
+	    
+
+	]
+
+var options = {
+		
+		    //Boolean - Whether we should show a stroke on each segment
+		       segmentShowStroke : false,
+
+		       //String - The colour of each segment stroke
+		       // segmentStrokeColor : "#fff",
+
+		       //Number - The width of each segment stroke
+		       // segmentStrokeWidth : 1,
+
+		       //Number - The percentage of the chart that we cut out of the middle
+		       percentageInnerCutout : 50, // This is 0 for Pie charts
+
+		       //Number - Amount of animation steps
+		       animationSteps : 100,
+
+		       //String - Animation easing effect
+		       animationEasing : "easeOutBounce",
+
+		       //Boolean - Whether we animate the rotation of the Doughnut
+		       animateRotate : true,
+
+		       //Boolean - Whether we animate scaling the Doughnut from the centre
+		       animateScale : false,
+
+		       //String - A legend template
+		       legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+
+	}
+
+	var ctx = document.getElementById("timeChart").getContext("2d");
+
+	var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
 }
 
 	

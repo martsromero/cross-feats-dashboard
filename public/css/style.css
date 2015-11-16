@@ -6,7 +6,7 @@ body{
 	background-color: #2C3E50;
 	color: #E4F1FE;
   font-family: 'Oswald', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 
 }
 
@@ -14,6 +14,13 @@ body{
 h1{
 	text-align: left;
 	margin-left: 30px; 
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+h2{
+  text-align: center;
+  margin-left: 30px; 
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
 }
@@ -51,3 +58,20 @@ h3 {
   margin-right: 30px; 
   color: #E4F1FE;
 }
+
+
+#morning {
+  color: rgba(217,30,24,1);
+  font-size:168%;
+}
+
+#afternoon {
+  color: rgba(46,204,113,1);
+  font-size:168%;
+}
+
+#evening {
+  color: #6BB9F0;
+  font-size:168%;
+}
+
