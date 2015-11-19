@@ -270,7 +270,7 @@ function buildDeadliftChart(){
 function buildPrChart(){
 	
 	var data = {
-	    labels: ["Back Squat", "Deadlift", "Snatch", "Clean & Jerk"],
+	    labels: ["Back Squat PR", "Deadlift PR", "Snatch PR", "Clean & Jerk PR"],
 	    datasets: [
 	        {
 	            label: "Personal Record",
