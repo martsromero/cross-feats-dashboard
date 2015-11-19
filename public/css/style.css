@@ -5,7 +5,7 @@
 body{
 	background-color: #2C3E50;
 	color: #E4F1FE;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 500;
 
 }
@@ -14,14 +14,14 @@ body{
 h1{
 	text-align: left;
 	margin-left: 30px; 
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
 }
 
 h2{
   text-align: center;
   margin-left: 30px; 
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
 }
 
@@ -76,4 +76,3 @@ h3 {
   color: #95A5A6;
   font-size:100%;
 }
-

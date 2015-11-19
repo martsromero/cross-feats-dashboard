@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CrossFeats</title>
 
-    <!-- Custom Font - -->
-    <link href='https://fonts.googleapis.com/css?family=Oswald:300,700,400' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300italic,300,100italic,100,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -22,18 +22,22 @@
 
   </head>
   <body>
-Watch me WIP.
-
 <div class="container-fluid">
   <div class="col-md-12"> 
 <img src="img/Header.png" width="100%" height="auto">
+  <br>
+  <br>
+  <br>
   </div>
 </div>
 
 
 <div class="wow bounceInLeft" data-wow-duration="8s" data-wow-offset="17">
-<div class="container-fluid">
+<div class="container-fluid" id="frametwo">
+
   <div class="col-md-3">  <h1> Monthly Frequency </h1>
+    <br>
+    <br>
     <div style="margin-left:5em;" id="question"> How many times in a month did I go to CrossFit Union Square from October 2014 to November 2015? </div>
     <br>
     <h4>Place your cursor on the the points.</h4></div>
@@ -45,30 +49,37 @@ Watch me WIP.
 
   <div class="col-md-12">
     <!-- Activity Chart -->
-   
+   <br>
+   <br>
     <br>
        <div id="lineChartLegend" class="legend"></div>
-       <canvas id="activeChart" width="1200" height="250"></canvas>
+       <canvas id="activeChart" width="1200" height="400"></canvas>
      </div>
 
   </div>
 </div>
+<br>
+<br>
+<br>
 </div>
 
-<br>
-<br>
-<br>
+
 <div class="wow fadeIn" data-wow-duration="8s" data-wow-offset="10">
-<div class="container-fluid">
+<div class="container-fluid" id="framethree">
+  <br>
+  <br>
+  <br>
   <div class="col-md-2">
     <!-- Day Chart -->
     <h2> Day Frequency </h1>
+      <br>
       <div style="margin-left:5em;" id="question"> Which day of the week did I go the most? </div>
       <br>
       <h4>Place your cursor on the chart.</h4>
     <br>
+    <br>
            <div id="lineChartLegend" class="legend"></div>
-           <canvas id="dayChart" width="400" height="400"  align="center"></canvas>
+           <canvas id="dayChart" width="500" height="500"  align="center"></canvas>
   </div>
   <div class="col-md-2">
 
@@ -79,12 +90,16 @@ Watch me WIP.
   <div class="col-md-3">
     <!-- Time Chart -->
     <h2> Time Frequency </h2>
+    <br>
     <div style="margin-left:10em;" id="question"> What time did I go the most? </div>
+    
     <br>
     <h4>Place your cursor on the chart.</h4>
     <br>
+    <br>
+    <br>
            <div id="lineChartLegend" class="legend"></div>
-           <canvas id="timeChart" width="350" height="350"  align="center"></canvas>
+           <canvas id="timeChart" width="400" height="400"  align="center"></canvas>
 
 
 
@@ -95,7 +110,9 @@ Watch me WIP.
 <blockquote> Barbell Club at 1:00 p.m. and 8:30 p.m. are sweet spots for making PRs 100% of the time.  </blockquote>
       </div>
 
+
   <h2> Attendance per Time Slot</h2>
+  
   <div class="col-md-1">
 
     <p class="text-center">5:00 a.m.<span id="morning"> 35 </span> </p>
@@ -124,18 +141,24 @@ Watch me WIP.
    </div>
   
   </div>
+
+<br>
+<br>
+<br>
 </div>
 
 
 
 <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
 
-  <div class="wow bounceInLeft" data-wow-duration="5s" data-wow-offset="10">
+
+    
+<div class="wow bounceInLeft" data-wow-duration="5s" data-wow-offset="10">
+<div class="container-fluid" id="framefour">
+<br>
+<br>
 <h1>Personal Lifting Records</h1>
 <div style="margin-left:5em;" id="question"> PR weights are in lbs. </div>
-    <br>
-<br>
-<div class="container-fluid">
   <!-- <div class="col-xs-6 col-md-4"><center>Benchmarks</center>
     <center><img src="http://www.reactiongifs.us/wp-content/uploads/2014/10/what_the_hell_parks_rec.gif" alt="benchmarks" style="width:300px;height:200px;"></center>
   </div> -->
@@ -154,14 +177,17 @@ Watch me WIP.
   </div>
 
 </div>
+<br>
+<br>
+
 </div>
 
+<div class="wow bounceInRight" data-wow-duration="5s" data-wow-offset="10">
+
+<div class="container-fluid" id="framefour">
 <br>
 <br>
 
-<div class="wow bounceInRight" data-wow-duration="5s" data-wow-offset="10">
-<br>
-<div class="container-fluid">
   <div class="col-xs-12 col-md-6"><center>Snatch</center>
     <br>
       <!-- Snatch -->
@@ -178,19 +204,26 @@ Watch me WIP.
 </div>
 </div>
 
-<br>
-<br>
+
 
 
 
 </div>
-</div>
+
 <br>
+<br>
+<br>
+</div>
+
 
 
 
 <div class="wow bounceInUp" data-wow-duration="5s" data-wow-offset="17">
 <div class="container-fluid">
+<br>
+<br>
+<br>
+
  <!--  <div class="col-xs-6 col-md-4"><center>Frequencies</center>
     <center><img src="http://i.imgur.com/oBaf2lv.gif" alt="Frequencies" style="width:300px;height:300px;"></center>
   </div> -->
@@ -217,7 +250,11 @@ Watch me WIP.
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 
   <div class="wow fadeIn" data-wow-duration="17s" data-wow-offset="10">
-    <h1>Athlete Overview</h1>
+ 
+
+<br>
+<br>
+
 
     <div class="container-fluid" align="center">
 
@@ -225,7 +262,7 @@ Watch me WIP.
       <div class="col-md-3">
         <img src="img/martin copy.png" style="width:123px;height:123px;">
         <br>
-        <br>
+       
         <blockquote align="left" style="margin-left:.8em;"> Martin has been doing CrossFit for almost three years. He practiced yoga for a year before finally switching gears to CrossFit.</blockquote>
 
         <p align="left" style="margin-left:.8em;"> He trained as a long distance runner and was part of the athletics varsity in high school.</p>
@@ -247,25 +284,24 @@ Watch me WIP.
         <img src="img/female copy.png" style="width:123px;height:123px;">
       <br>
       <br>
+      
       <p> Details re CrossFit women's average. Starbucks Lover.</p>
       </div>
       
       <div class="col-md-2">
         <img src="img/ben copy.png" style="width:123px;height:123px;">
          <br>
-        <br>
+        
         <blockquote align="left">Ben is the 2015 CrossFit Games men's champion.</blockquote>
 
-        <p align="left">He has competed at the Games since 2009 and has placed third in 2011 and 2013. </p>
-
-         <p align="left">He is one of three male athletes who have qualified for the Games as an individual seven times. He shares the honor with 2008 Games Champion Jason Khalipa and Chris Spealler. </p>
+        <p align="left">He has competed at the Games since 2009 and has placed third in 2011 and 2013.He is one of three male athletes who have qualified for the Games as an individual seven times. He shares the honor with 2008 Games Champion Jason Khalipa and Chris Spealler. </p>
 
         <p align="left">Smith trains at CrossFit Krypton in Virginia. </p>
       </div>
       
       <div class="col-md-2">
         <img src="img/Katrin copy.png" style="width:123px;height:123px;">
-        <br>
+        
         <br>
         <blockquote align="left">Katrin is the 2015 CrossFit Games women's champion.</blockquote>
 
