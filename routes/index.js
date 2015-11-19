@@ -14,14 +14,16 @@ var Pr = require("../models/pr.js");
  */
 router.get('/', function(req, res) {
 
-  var jsonData = {
-  	'name': 'personal-record',
-  	'api-status':'OK'
-  }
+  res.render('crossfeats.html')
 
-  // respond with json data
-  res.json(jsonData)
-});
+  // // var jsonData = {
+  // // 	'name': 'personal-record',
+  // // 	'api-status':'OK'
+  // // }
+
+  // // respond with json data
+  // res.json(jsonData)
+})
 
 router.get('/add-pr', function(req,res){
 
@@ -35,11 +37,11 @@ router.get('/personal-records', function(req,res){
 
 })
 
-router.get('/stats', function(req,res){
+// router.get('/stats', function(req,res){
 
-  res.render('crossfeats.html')
+  
 
-})
+// })
 
 
 router.post('/api/create', function(req,res){

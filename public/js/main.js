@@ -82,7 +82,7 @@ buildTimeChart();
 function buildLineChart(){
 	
 	var data = {
-	    labels: ["Philippine PR", "Apr '15", "May '15"],
+	    labels: ["Ph PR", "Apr '15", "May '15"],
 	    datasets: [
 	        {
 	            label: "",
@@ -129,7 +129,7 @@ function buildLineChart(){
 function buildSnatchChart(){
 	
 	var data = {
-	    labels: ["Philippine PR", "May '15", "Early Sep '15", "Late Sep '15", "Early Oct '15", "Late Oct '15"],
+	    labels: ["Ph PR", "May '15", "Early Sep '15", "Late Sep '15", "Early Oct '15", "Late Oct '15"],
 	    datasets: [
 	        {
 	            label: "",
@@ -176,7 +176,7 @@ function buildSnatchChart(){
 function buildBacksquatChart(){
 	
 	var data = {
-	    labels: ["Philippine PR", "Nov '14", "Feb '15", "Early Apr '15", " Late Apr '15", "May '15", "June '15"],
+	    labels: ["Philippine (Ph) PR", "Nov '14", "Feb '15", "Early Apr '15", " Late Apr '15", "May '15", "June '15"],
 	    datasets: [
 	        {
 	            label: "",
